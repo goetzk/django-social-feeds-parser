@@ -107,7 +107,7 @@ class Post(models.Model):
     Model storing posts of stored sources in SpokeSource.
     """
     source_uid = models.CharField(_('ID in the social media source'), max_length=255, editable=False)
-    channel = models.ForeignKey(Channel)
+    channel = models.ForeignKey(Channel, on_delete=models.CASCADE)
     link = models.CharField(_('Link'), null=True, blank=True, max_length=255)
 
     author = models.CharField(_('Author name'), max_length=50)
