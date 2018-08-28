@@ -34,7 +34,7 @@ setup(
     ],
     install_requires=[
         'facebook-sdk==1.0.0',
-        'python-instagram==0.8.0.',
+        'python-instagram==1.3.2',
         'tweepy==3.3.0'
     ],
     dependency_links=[
