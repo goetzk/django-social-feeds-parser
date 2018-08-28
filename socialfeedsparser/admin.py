@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.template.defaultfilters import truncatewords
 from django.utils.timezone import now
 from django.utils.translation import ugettext_lazy as _
+from django.utils.html import format_html
 
 from .models import Post, Channel
 
@@ -30,8 +31,8 @@ class ChannelAdmin(admin.ModelAdmin):
     radio_fields = {"query_type": admin.HORIZONTAL}
 
     def show_linkedin_token_renew_link(self, obj):
-        return '<a href="%s">%s</a>' % (obj.token_renew_link, _('Click to renew')) if obj.source == 'linkedin' else ''
-    show_linkedin_token_renew_link.allow_tags = True
+        return format_html('<a href="%s">%s</a>' % (obj.token_renew_link, _('Click to renew'))) if obj.source == 'linkedin' else ''
+    # show_linkedin_token_renew_link.allow_tags = True  # deprecated from Django 1.9.
     show_linkedin_token_renew_link.short_description = _('Renew Token')
 
 

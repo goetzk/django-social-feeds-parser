@@ -5,7 +5,7 @@ except ImportError:
     from django.utils.module_loading import import_module
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
-from linkedin import linkedin
+from linkedin_v2 import linkedin
 
 from .managers import PostManager, ChannelManager
 from .settings import SOCIALFEEDSPARSER_SOURCE
