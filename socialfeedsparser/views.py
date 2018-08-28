@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.shortcuts import redirect
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import ListView
-from linkedin_v2 import linkedin
+from linkedin import linkedin
 
 from .contrib.linkedin.settings import LINKEDIN_API_KEY, LINKEDIN_API_SECRET, \
     LINKEDIN_RETURN_URL, LINKEDIN_PERMISSIONS

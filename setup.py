@@ -38,6 +38,7 @@ setup(
         'tweepy==3.3.0'
     ],
     dependency_links=[
-        'https://github.com/ozgur/python-linkedin.git@master#egg=python-linkedin',
+        # 'https://github.com/ozgur/python-linkedin.git@master#egg=python-linkedin',
+        'https://github.com/marshallhumble/python-linkedin',
     ],
 )

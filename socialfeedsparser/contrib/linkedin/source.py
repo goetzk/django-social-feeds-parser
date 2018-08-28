@@ -1,5 +1,5 @@
 import datetime
-from linkedin_v2 import linkedin
+from linkedin import linkedin
 
 from socialfeedsparser.contrib.parsers import ChannelParser, PostParser
 
