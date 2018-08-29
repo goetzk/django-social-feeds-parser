@@ -39,6 +39,6 @@ setup(
     ],
     dependency_links=[
         # 'https://github.com/ozgur/python-linkedin.git@master#egg=python-linkedin',
-        'https://github.com/marshallhumble/python-linkedin',
+        'https://github.com/BrendanMartin/python-linkedin-v2',
     ],
 )
