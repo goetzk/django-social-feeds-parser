@@ -12,7 +12,7 @@ def get_messages(modeladmin, request, queryset):
     Collects messages from selected sources.
     """
     for source in queryset:
-        sc = source.source_class(spoke_source=source)
+        sc = source.source_class(channel=source)
         sc.collect_messages()
         source.updated = now()
         source.save()
@@ -26,9 +26,16 @@ class ChannelAdmin(admin.ModelAdmin):
     """
     list_display = ('query', 'name', 'source', 'query_type', 'updated', 'is_active', 'show_linkedin_token_renew_link')
     list_filter = ('query', 'source', 'query_type', 'updated', 'is_active')
-    exclude = ('user_secret', 'user_token',)
+    # exclude = ('user_secret', 'user_token',)
+    exclude = ('user_secret', )
     actions = [get_messages]
     radio_fields = {"query_type": admin.HORIZONTAL}
+
+    def get_readonly_fields(self, request, obj=None):
+        readonly_fields = super().get_readonly_fields(request, obj=obj)
+        if obj and obj.source == 'instagram':
+            readonly_fields += ('user_token', )
+        return readonly_fields
 
     def show_linkedin_token_renew_link(self, obj):
         return format_html('<a href="%s">%s</a>' % (obj.token_renew_link, _('Click to renew'))) if obj.source == 'linkedin' else ''
