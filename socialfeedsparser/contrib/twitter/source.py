@@ -26,7 +26,7 @@ class TwitterSource(ChannelParser):
         """
         return self.get_api().user_timeline(
             screen_name=screen_name, count=count,
-            include_entities=True, include_rts=True)
+            include_entities=True, include_rts=True, tweet_mode='extended')
 
     def get_messages_search(self, search):
         """
