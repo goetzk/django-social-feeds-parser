@@ -35,10 +35,14 @@ setup(
     install_requires=[
         'facebook-sdk==1.0.0',
         'python-instagram==1.3.2',
-        'tweepy==3.3.0'
+        'tweepy==3.3.0',
+        'Pillow'
     ],
     dependency_links=[
         # 'https://github.com/ozgur/python-linkedin.git@master#egg=python-linkedin',
         'https://github.com/BrendanMartin/python-linkedin-v2.git',
     ],
+    extras_require={
+        'Linkedin':  ["python-linkedin-v2"],
+    }
 )

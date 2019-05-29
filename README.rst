@@ -4,9 +4,10 @@ django-social-feeds-parser
 
 django-social-feeds-parser is a Django application to store and display feeds coming from social media such as:
 
-* facebook
-* twitter
-* instagram
+* Facebook
+* Twitter
+* Instagram
+* Linkedin
 
 *******
 Install
@@ -17,12 +18,6 @@ From Github
 .. code-block::  shell-session
 
     pip install -e git+https://github.com/revsquare/django-social-feeds-parser.git#egg=django_socialfeeds-parser
-
-Install python-linkedin if needed:
-
-.. code-block:: shell-session
-
-    pip install -e git+https://github.com/ozgur/python-linkedin.git@master#egg=python-linkedin
 
 *****
 Setup
