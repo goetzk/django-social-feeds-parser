@@ -8,8 +8,6 @@ django-social-feeds-parser is a django application to store and display feed com
 * twitter
 * instagram
 
-This library is a fork of Tomasz Roszko's django-spokeaboutus
-
 *******
 Install
 *******
@@ -195,3 +193,12 @@ TODO
 * use celery to process news
 * write tests
 * support python3.4 for twitter and instagram
+
+
+History
+=======
+
+In Brief:
+The repository of @goetzk was forked from @marrog (the most active fork of the main project at the time), which was itself previously forked from @RevSquare.
+That was forked by @RevSquare from their django-spokeaboutus repository which was forked from @tomaszroszko.
+
