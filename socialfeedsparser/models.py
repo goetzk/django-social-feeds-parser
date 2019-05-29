@@ -15,8 +15,13 @@ from .contrib.linkedin.settings import LINKEDIN_API_KEY, LINKEDIN_API_SECRET, \
 # load all sources
 from .utils import get_source, linkify_url, linkify_hashes, linkify_arobase
 
+# TODO: don't run on import
+# NOTE: to avoid running on import, set SOCIALFEEDSPARSER_SOURCE to empty
 SOURCE = [import_module(s).SOCIALFEEDSPARSER_SOURCE for s in SOCIALFEEDSPARSER_SOURCE]
-SOURCE_CHOICES = [(s.slug, s.name) for s in SOURCE]
+if SOURCE:
+    SOURCE_CHOICES = [(s.slug, s.name) for s in SOURCE]
+else:
+    SOURCE_CHOICES = [('NONE', 'No sources configured')]
 
 
 class Channel(models.Model):

@@ -46,7 +46,7 @@ Configure the social media source you want to trigger. You can of course add you
         'your.socialfeedsparser.source',
     )
 
-For each service you add, you will need to configure their API accesses:
+For each service you add, you will need to configure their API accesses. Leaving the SOCIALFEEDSPARSER_SOURCE list empty will allow migrations to run without configuration.
 
 
 Facebook
