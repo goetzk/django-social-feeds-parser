@@ -2,7 +2,7 @@
 django-social-feeds-parser
 ##########################
 
-django-social-feeds-parser is a django application to store and display feed coming from social medias such as:
+django-social-feeds-parser is a Django application to store and display feeds coming from social media such as:
 
 * facebook
 * twitter
@@ -39,7 +39,7 @@ settings.py
         ...
     )
 
-Configure the social media source you want to trigger. You can of course add you own custom channel source.
+Configure the social media source you want to trigger. You can of course add your own custom channel source.
 
 .. code-block::  python
 
@@ -124,7 +124,7 @@ database
 Configure sources
 *****************
 
-Each query you setup for a social media is called a "channel". They are configurable from the admin. You can wether parse a user or page feed. Or even use a search query (this functionnality won't work for facebook as the ability to search for posts has been remove from its API).
+Each query you setup for a social media is called a "channel". They are configurable from the admin UI. You can parse a user or page feed. Or even use a search query (this functionnality won't work for Facebook as the ability to search for posts has been remove from its API).
 
 *******************
 Collecting messages
