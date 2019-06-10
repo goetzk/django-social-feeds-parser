@@ -9,6 +9,7 @@ from linkedin_v2 import linkedin
 
 from .managers import PostManager, ChannelManager
 from .settings import SOCIALFEEDSPARSER_SOURCE
+# TODO: make conditional by try/except.
 from .contrib.linkedin.settings import LINKEDIN_API_KEY, LINKEDIN_API_SECRET, \
     LINKEDIN_RETURN_URL, LINKEDIN_PERMISSIONS
 

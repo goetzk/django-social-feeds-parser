@@ -52,6 +52,8 @@ For each service you add, you will need to configure their API accesses. Leaving
 Facebook
 --------
 
+https://developers.facebook.com/docs/apps/
+
 .. code-block::  python
 
     SOCIALFEEDSPARSER_FACEBOOK_CLIENT_ID = "your app client_id"
